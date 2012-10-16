@@ -1,3 +1,5 @@
+$SystemWebAssembly = [System.Reflection.Assembly]::LoadWithPartialName("System.Web")
+
 function Publish-HipChatRoomMessage{
 <#
 
@@ -86,12 +88,9 @@ function Publish-HipChatRoomMessage{
 						$notify = "1"
 					}		
 					
-					#Replace naked URL's with hyperlinks
-					$regex = [regex] "((www\.|(http|https|ftp|news|file)+\:\/\/)[&#95;.a-z0-9-]+\.[a-z0-9\/&#95;:@=.+?,##%&~-]*[^.|\'|\# |!|\(|?|,| |>|<|;|\)])"
-					$message = $regex.Replace($message, "<a href=`"`$1`">`$1</a>").Replace("href=`"www", "href=`"http://www")
-					
 					#Do the HTTP POST to HipChat
-					$post = "auth_token=$apitoken&room_id=$roomid&from=$from&color=$colour&message=$message&notify=$notify"
+					$encodedMessage = [System.Web.HttpUtility]::UrlEncode($message)
+					$post = "auth_token=$apitoken&room_id=$roomid&from=$from&color=$colour&message=$encodedMessage&notify=$notify"
 					Write-Debug "post = $post"
 					Write-Debug "https://$apihost/v1/rooms/message"
 					$webRequest = [System.Net.WebRequest]::Create("https://$apihost/v1/rooms/message")
