@@ -3,6 +3,13 @@ The hipchat-ps module is inspired by HipChat's [hipchat-cli](https://github.com/
 
 ## Getting Started
 1. Copy this module to any location found in $env:PSModulePath
+
+	Copy to Windows directory for global install:
+	
+	```
+	C:\Windows\System32\WindowsPowerShell\v1.0\Modules\Publish-HipChatRoomMessage\Publish-HipChatRoomMessage.psm1
+	```
+
 1. Import the module
 
 	C:\PS>Import-Module Publish-HipChatRoomMessage
