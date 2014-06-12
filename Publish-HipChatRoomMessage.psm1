@@ -38,6 +38,9 @@ List available functions
 .EXAMPLE
 Publish-HipChatRoomMessage -apitoken e6b4ed16569cb86d272692171d5 5c8 -roomid 49459 -from "lloyd" -message "Test Message http://www.google.com"
 Execute the module
+.EXAMPLE
+Publish-HipChatRoomMessage -apitoken e6b4ed16569cb86d272692171d5 5c8 -roomid 49459 -from "lloyd" -message_format "html" -message "<img src='http://www.somephotohost.com/hodor.jpg' />" -colour "green"
+Executes the module, using html format, posting a picture in Hipchat, and the message has a green background.
 #>
 [cmdletbinding()]
 Param(
@@ -87,7 +90,7 @@ $colour = "yellow"
 }
 if ($message_format -eq "")
 {
-$message_format = "html"
+$message_format = "text"
 }
 if ($apihost -eq "")
 {
