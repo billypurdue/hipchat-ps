@@ -8,9 +8,9 @@ A powershell script for sending a message to a room in HipChat
 .DESCRIPTION
 A powershell script for sending a message to a room in HipChat
 .LINK
-https://github.com/lholman/hipchat-ps
+https://github.com/wizardscantswim/hipchat-ps
 .NOTES
-Author: Lloyd Holman
+Author: Billy Purdue (forked from Lloyd Holman)
 DateCreated: 04/09/2012
 Requirements: Copy this module to any location found in $env:PSModulePath
 .PARAMETER apitoken
