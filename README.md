@@ -1,5 +1,6 @@
 #hipchat-ps
 The hipchat-ps module is inspired by HipChat's [hipchat-cli](https://github.com/hipchat/hipchat-cli) but wraps up the functionality to send a HipChat message in an easy to use Windows PowerShell module. 
+I forked the original project and have done my best to add a bit more to it, and to clean it up a bit (not that what it had before was bad, I'm a novice and appreciate a lot of white space to seperate things out).
 
 ## Getting Started
 1. Copy this module to any location found in $env:PSModulePath
