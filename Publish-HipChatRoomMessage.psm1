@@ -19,7 +19,7 @@ function Publish-HipChatRoomMessage
 			Required. The id of the HipChat room you want to send the message to, find the id from here https://infigosoftware.hipchat.com/history
 		.PARAMETER from
 			Required. The name the message will appear be sent from. Must be less than 15 characters long. May contain letters, numbers, -, _, and spaces.
-	.PARAMET	ER message
+		.PARAMETER message
 			Required. The message body. 10,000 characters max.
 		.PARAMATER message_format
 			Optional. Text or HTML format.
