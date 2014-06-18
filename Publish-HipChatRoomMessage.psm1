@@ -21,7 +21,7 @@ function Publish-HipChatRoomMessage
 			Required. The name the message will appear be sent from. Must be less than 15 characters long. May contain letters, numbers, -, _, and spaces.
 		.PARAMETER message
 			Required. The message body. 10,000 characters max.
-		.PARAMATER message_format
+		.PARAMETER message_format
 			Optional. Text or HTML format.
 		.PARAMETER colour
 			The background colour of the HipChat message. One of "yellow", "red", "green", "purple", "gray", or "random". (default: yellow)
